@@ -7,7 +7,7 @@ import static org.fest.assertions.api.Assertions.assertThat;
  */
 public class GCDTest {
     @Test
-    public void fizz_buzz_isnum_test() {
+    public void should_return_50() {
         //given
         GCD gcd = new GCD();
 
