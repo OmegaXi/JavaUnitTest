@@ -7,15 +7,15 @@ import static org.fest.assertions.api.Assertions.assertThat;
  */
 public class PrimeFactorsTest {
     @Test
-    public void should_return_three_five_five() {
+    public void should_return_three_three_five() {
         //given
-        //PrimeFactors pf = new PrimeFactors();
+        PrimeFactors pf = new PrimeFactors();
 
         //when
-        // result = pf.findPF(45);
+        String result = pf.findPrimeFactors(45);
 
         //then
-        //assertThat(result).isEqualTo();
+        assertThat(result).isEqualTo("45=3*3*5");
 
     }
 }

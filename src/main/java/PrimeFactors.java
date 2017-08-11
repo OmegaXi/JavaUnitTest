@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /**
  * Created by PANYE on 8/11/2017.
  */
@@ -18,27 +16,24 @@ import java.util.Scanner;
 */
 
 public class PrimeFactors {
-    public static void findPF(int num) {
-        System.out.print(num + "=");
+    public String findPrimeFactors(int num) {
+        String result = String.valueOf(num);
+        result += "=";
         while (num != 1) {
             for (int i = 2; i < num + 1; i++) {
                 if (num % i == 0) {
                     num /= i;
                     if (num == 1) {
-                        System.out.print(i);
+                        result += String.valueOf(i);
                     } else {
-                        System.out.print(i+"*");
+                        result += String.valueOf(i);
+                        result += "*";
                         break;
                     }
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.print("Input an number:");
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        findPF(num);
+        return result;
     }
 }
+
